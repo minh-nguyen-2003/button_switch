@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:adjustViewBounds="true"
-        android:src="@drawable/custom_track_default"/>
+        android:src="@drawable/custom_track"/>
 
 
     <!-- Thumb (phía trên) -->
