@@ -1,6 +1,27 @@
-# Button Switch
+# 🔘 ButtonSwitch
 
-## Đây là cách sử dụng `ButtonSwitch` trong XML:
+# ButtonSwitch là một custom Android view giúp tạo nút gạt (switch) với giao diện hoàn toàn tùy biến, hỗ trợ ảnh cho thumb/track, hiệu ứng kéo mượt mà và có thể điều chỉnh kích thước, margin, padding linh hoạt.
+
+## 📦 Cài đặt (qua JitPack)
+
+Thêm vào build.gradle (project):
+```
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+Thêm dependency vào build.gradle (module):
+
+```
+implementation 'com.github.minh-nguyen-2003:button_switch:1.0.0'
+```
+
+## ⚠️ Nhớ thay 1.0.0 bằng tag release phù hợp.
+
+## 💡 Cách sử dụng cơ bản
 
 ```xml
 <vn.com.minh_nguyen.vkey.switchcustom.switch_button.ButtonSwitch
@@ -11,26 +32,82 @@
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:msw_thumbDrawable="@drawable/custom_thumb"
-    app:msw_trackDrawable="@drawable/custom_track"
+    app:msw_thumbDrawable="@drawable/thumb_selector"
+    app:msw_trackDrawable="@drawable/track_selector"
     app:msw_trackMarginHorizontal="10dp" />
 ```
-## 🎨 Custom Attributes
-Bạn có thể tùy chỉnh giao diện switch một cách dễ dàng thông qua các thuộc tính sau:
 
+## 🥉 Custom Attributes
+
+Thuộc tính
+* app:msw_checked | true nếu bạn muốn công tắc bật mặc định, false nếu không (mặc định là false)
+* app:msw_thumbDrawable | Drawable cho thumb – ví dụ: @drawable/thumb_selector
+* app:msw_trackDrawable | Drawable cho track – ví dụ: @drawable/track_selector
+* app:msw_thumbSize | Kích thước vuông của thumb – ví dụ: 24dp
+* app:msw_thumbWidth | Chiều rộng ring ri\u00eêng của thumb – ví dụ: 28dp
+* app:msw_thumbHeight | Chiều cao riêng của thumb – ví dụ: 20dp
+* app:msw_trackWidth | Chiều rộng track – ví dụ: 60dp
+* app:msw_trackHeight | Chiều cao track – ví dụ: 24dp
+* app:msw_trackMarginHorizontal | Lề trái/phải track – ví dụ: 4dp
+* app:msw_thumbPadding | khoảng cách tùy chỉnh từ thumb tới track – ví dụ: 2dp
+* 
+## 🖼️ Tùy biến drawable theo trạng thái
+
+* Ví dụ: thumb_selector.xml
 ```
-app:msw_checked="true" true nếu bạn muốn công tắc bật mặc định, false nếu không. (Mặc định là false)
-app:msw_thumbDrawable	Hình ảnh của thumb (nút gạt). Ví dụ: @drawable/custom_thumb.
-app:msw_trackDrawable	Hình ảnh của track (nền). Ví dụ: @drawable/custom_track.
-app:msw_thumbSize	Kích thước vuông của thumb. Ví dụ: 24dp. (Ưu tiên nếu không set riêng width/height)
-app:msw_thumbWidth	Chiều rộng của thumb. Ví dụ: 28dp
-app:msw_thumbHeight	Chiều cao của thumb. Ví dụ: 20dp
-app:msw_trackWidth	Chiều rộng của track. Ví dụ: 60dp
-app:msw_trackHeight	Chiều cao của track. Ví dụ: 24dp
-app:msw_trackMarginHorizontal	Khoảng cách lề trái/phải của track. Ví dụ: 4dp
-app:msw_thumbPadding	Padding bên trong của thumb. Ví dụ: 2dp
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/icon_thumb_selected" android:state_selected="true" />
+    <item android:drawable="@drawable/icon_thumb_default" />
+</selector>
+```
+* Ví dụ: track_selector.xml
+```
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/track_on" android:state_selected="true" />
+    <item android:drawable="@drawable/track_off" />
+</selector>
+```
+## ✅ ButtonSwitch sẽ cập nhật isSelected cho cả thumb và track khi bật/tắt để selector hoạt động chính xác.
+
+## 🔁 Lắng nghe trạng thái bật/tắt
+```kotlin
+binding.btnSwitch.setOnCheckedChangeListener { isChecked ->
+    Log.d("Switch", "Trạng thái: $isChecked")
+}
 ```
 
+## 🛠️ Tuì chỉnh động trong code
+```
+btnSwitch.setThumbDrawable(R.drawable.custom_thumb)
+btnSwitch.setTrackDrawable(R.drawable.custom_track)
+btnSwitch.setChecked(true)
+```
 ## 📝 License
-[This project is licensed under the MIT License
-© 2025 Nguyễn Đức Minh]()
+```
+MIT License
+
+Created on: 07/03/2025
+Repository: https://github.com/minh-nguyen-2003/button_switch
+
+Copyright (c) 2025 Nguyễn Đức Minh
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+**The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.** You must give appropriate credit to the original author by referencing:
+
+> Source: https://github.com/minh-nguyen-2003/button_switch
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
