@@ -1,13 +1,14 @@
-package vn.com.minh_nguyen.vkey.switchcustom.switch_button
+package vn.minh_nguyen.vkey.switchcustom
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.widget.FrameLayout
-import vn.com.minh_nguyen.vkey.customswitch.R
-import vn.com.minh_nguyen.vkey.customswitch.databinding.CustomSwitchLayoutBinding
+import vn.minh_nguyen.vkey.switchcustom.databinding.CustomSwitchLayoutBinding
 
+@SuppressLint("ClickableViewAccessibility")
 class ButtonSwitch @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null
 ) : FrameLayout(context, attrs) {
