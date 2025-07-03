@@ -35,6 +35,9 @@ android {
     viewBinding {
         enable = true
     }
+    publishing {
+        singleVariant("release")
+    }
 }
 
 dependencies {
