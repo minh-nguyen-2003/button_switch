@@ -18,8 +18,8 @@
 ## 🎨 Custom Attributes
 Bạn có thể tùy chỉnh giao diện switch một cách dễ dàng thông qua các thuộc tính sau:
 
-Thuộc tính	Mô tả
-app:msw_checked	true nếu bạn muốn công tắc bật mặc định, false nếu không. (Mặc định là false)
+```
+app:msw_checked="true" true nếu bạn muốn công tắc bật mặc định, false nếu không. (Mặc định là false)
 app:msw_thumbDrawable	Hình ảnh của thumb (nút gạt). Ví dụ: @drawable/custom_thumb.
 app:msw_trackDrawable	Hình ảnh của track (nền). Ví dụ: @drawable/custom_track.
 app:msw_thumbSize	Kích thước vuông của thumb. Ví dụ: 24dp. (Ưu tiên nếu không set riêng width/height)
@@ -29,7 +29,8 @@ app:msw_trackWidth	Chiều rộng của track. Ví dụ: 60dp
 app:msw_trackHeight	Chiều cao của track. Ví dụ: 24dp
 app:msw_trackMarginHorizontal	Khoảng cách lề trái/phải của track. Ví dụ: 4dp
 app:msw_thumbPadding	Padding bên trong của thumb. Ví dụ: 2dp
+```
 
 ## 📝 License
-This project is licensed under the MIT License
-© 2025 Nguyễn Đức Minh
+[This project is licensed under the MIT License
+© 2025 Nguyễn Đức Minh]()
