@@ -48,15 +48,16 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 }
 
-publishing {
-    publications {
-        create<MavenPublication>("release") {
-            afterEvaluate {
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
                 from(components["release"])
+                groupId = "com.github.minh-nguyen-2003"
+                artifactId = "button_switch"
+                version = "v1.0.0"
             }
-            groupId = "com.github.minh-nguyen-2003"
-            artifactId = "CustomSwitch"
-            version = "v1.0.0"
         }
     }
 }
+
