@@ -1,0 +1,6 @@
+jdk:
+  - openjdk11
+
+gradle:
+  wrapper: true
+  build: ":button_switch:publishReleasePublicationToMavenLocal"
