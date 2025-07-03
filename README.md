@@ -39,16 +39,16 @@ implementation 'com.github.minh-nguyen-2003:button_switch:1.0.0'
 
 ## 🥉 Custom Attributes
 ```
-* app:msw_checked | true nếu bạn muốn công tắc bật mặc định, false nếu không (mặc định là false)
-* app:msw_thumbDrawable | Drawable cho thumb – ví dụ: @drawable/thumb_selector
-* app:msw_trackDrawable | Drawable cho track – ví dụ: @drawable/track_selector
-* app:msw_thumbSize | Kích thước vuông của thumb – ví dụ: 24dp
-* app:msw_thumbWidth | Chiều rộng ring ri\u00eêng của thumb – ví dụ: 28dp
-* app:msw_thumbHeight | Chiều cao riêng của thumb – ví dụ: 20dp
-* app:msw_trackWidth | Chiều rộng track – ví dụ: 60dp
-* app:msw_trackHeight | Chiều cao track – ví dụ: 24dp
-* app:msw_trackMarginHorizontal | Lề trái/phải track – ví dụ: 4dp
-* app:msw_thumbPadding | khoảng cách tùy chỉnh từ thumb tới track – ví dụ: 2dp
+- app:msw_checked                   | true nếu bạn muốn công tắc bật mặc định, false nếu không (mặc định là false)
+- app:msw_thumbDrawable             | Drawable cho thumb – ví dụ: @drawable/thumb_selector
+- app:msw_trackDrawable             | Drawable cho track – ví dụ: @drawable/track_selector
+- app:msw_thumbSize                 | Kích thước vuông của thumb – ví dụ: 24dp
+- app:msw_thumbWidth                | Chiều rộng riêng của thumb – ví dụ: 28dp
+- app:msw_thumbHeight               | Chiều cao riêng của thumb – ví dụ: 20dp
+- app:msw_trackWidth                | Chiều rộng track – ví dụ: 60dp
+- app:msw_trackHeight               | Chiều cao track – ví dụ: 24dp
+- app:msw_trackMarginHorizontal     | Lề trái/phải track – ví dụ: 4dp
+- app:msw_thumbPadding              | khoảng cách tùy chỉnh từ thumb tới track – ví dụ: 2dp
 ```
 ## 🖼️ Tùy biến drawable theo trạng thái
 
