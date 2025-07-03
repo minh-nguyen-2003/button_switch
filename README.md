@@ -1,6 +1,5 @@
 # 🔘 ButtonSwitch
-
-# ButtonSwitch là một custom Android view giúp tạo nút gạt (switch) với giao diện hoàn toàn tùy biến, hỗ trợ ảnh cho thumb/track, hiệu ứng kéo mượt mà và có thể điều chỉnh kích thước, margin, padding linh hoạt.
+ButtonSwitch là một custom Android view giúp tạo nút gạt (switch) với giao diện hoàn toàn tùy biến, hỗ trợ ảnh cho thumb/track, hiệu ứng kéo mượt mà và có thể điều chỉnh kích thước, margin, padding linh hoạt.
 
 ## 📦 Cài đặt (qua JitPack)
 
