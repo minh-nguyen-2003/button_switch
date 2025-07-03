@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/icon_track_selected" android:state_selected="true" />
-    <item android:drawable="@drawable/icon_track_default" />
+    <item android:drawable="@drawable/track_selected_1" android:state_selected="true" />
+    <item android:drawable="@drawable/track_default_1" />
 </selector>

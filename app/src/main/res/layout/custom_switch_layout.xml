@@ -10,7 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:adjustViewBounds="true"/>
+        android:adjustViewBounds="true"
+        android:src="@drawable/custom_track_default"/>
 
 
     <!-- Thumb (phía trên) -->
@@ -23,8 +24,9 @@
 
         <ImageView
             android:id="@+id/iconThumb"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="true"/>
+            android:adjustViewBounds="true"
+            android:src="@drawable/custom_thumb" />
     </FrameLayout>
 </FrameLayout>
