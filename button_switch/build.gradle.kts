@@ -41,13 +41,15 @@ android {
     }
 }
 
-publishing {
-    publications {
-        create<MavenPublication>("release") {
-            from(components["release"])
-            groupId = "com.github.minh-nguyen-2003"
-            artifactId = "button_switch"
-            version = "v1.0.0"
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "com.github.minh-nguyen-2003"
+                artifactId = "button_switch"
+                version = "v1.0.0"
+            }
         }
     }
 }
