@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <vn.com.minh_nguyen.vkey.switchcustom.switch_button.ButtonSwitch
+    <vn.minh_nguyen.vkey.switchcustom.ButtonSwitch
         android:id="@+id/btnSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
         app:msw_trackDrawable="@drawable/custom_track"
         app:msw_trackMarginHorizontal="10dp" />
 
-    <vn.com.minh_nguyen.vkey.switchcustom.switch_button.ButtonSwitch
+    <vn.minh_nguyen.vkey.switchcustom.ButtonSwitch
         android:id="@+id/btnSwitch2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
         app:msw_trackMarginHorizontal="0dp"
         app:msw_trackWidth="60dp" />
 
-    <vn.com.minh_nguyen.vkey.switchcustom.switch_button.ButtonSwitch
+    <vn.minh_nguyen.vkey.switchcustom.ButtonSwitch
         android:id="@+id/btnSwitch3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
         app:msw_trackMarginHorizontal="0dp"
         app:msw_trackWidth="60dp" />
 
-    <vn.com.minh_nguyen.vkey.switchcustom.switch_button.ButtonSwitch
+    <vn.minh_nguyen.vkey.switchcustom.ButtonSwitch
         android:id="@+id/btnSwitch4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
         app:msw_trackDrawable="@drawable/custom_track_3"
         app:msw_trackMarginHorizontal="0dp" />
 
-    <vn.com.minh_nguyen.vkey.switchcustom.switch_button.ButtonSwitch
+    <vn.minh_nguyen.vkey.switchcustom.ButtonSwitch
         android:id="@+id/buttonSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSwitch4" />
 
-    <vn.com.minh_nguyen.vkey.switchcustom.switch_button.ButtonSwitch
+    <vn.minh_nguyen.vkey.switchcustom.ButtonSwitch
         android:id="@+id/btnSwitch5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
