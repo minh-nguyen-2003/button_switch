@@ -35,31 +35,19 @@ android {
     viewBinding {
         enable = true
     }
+
     publishing {
         singleVariant("release")
     }
 }
 
-dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-}
-
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("release") {
-                from(components["release"])
-                groupId = "com.github.minh-nguyen-2003"
-                artifactId = "button_switch"
-                version = "v1.0.0"
-            }
+publishing {
+    publications {
+        create<MavenPublication>("release") {
+            from(components["release"])
+            groupId = "com.github.minh-nguyen-2003"
+            artifactId = "button_switch"
+            version = "v1.0.0"
         }
     }
 }
