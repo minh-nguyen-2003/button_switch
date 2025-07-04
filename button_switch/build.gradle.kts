@@ -48,7 +48,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.minh-nguyen-2003"
                 artifactId = "button_switch"
-                version = "v1.0.0"
+                version = "1.0.0"
             }
         }
     }
