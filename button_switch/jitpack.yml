@@ -1,6 +1,5 @@
 jdk:
   - openjdk17
 
-gradle:
-  wrapper: true
-  build: ":button_switch:publishReleasePublicationToMavenLocal"
+install:
+  - ./gradlew :button_switch:publishToMavenLocal
