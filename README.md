@@ -32,20 +32,25 @@ dependencies {
 
 ```xml
 
-<vn.minh_nguyen.vkey.switchcustom.ButtonSwitch android:id="@+id/btnSwitch"
-    android:layout_width="wrap_content" android:layout_height="wrap_content"
-    android:layout_marginTop="30dp" app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+<vn.minh_nguyen.vkey.switchcustom.ButtonSwitch 
+    android:id="@+id/btnSwitch"
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30dp" 
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent" 
+    app:layout_constraintTop_toTopOf="parent"
     app:msw_thumbDrawable="@drawable/thumb_selector"
-    app:msw_trackDrawable="@drawable/track_selector" app:msw_trackMarginHorizontal="10dp" />
+    app:msw_trackDrawable="@drawable/track_selector" 
+    app:msw_trackMarginHorizontal="10dp" />
 ```
 
 ## 🥉 Custom Attributes
 
 ```
 - app:msw_checked                   | true nếu bạn muốn công tắc bật mặc định, false nếu không (mặc định là false)
-- app:msw_thumbDrawable             | Drawable cho thumb – ví dụ: @drawable/thumb_selector
-- app:msw_trackDrawable             | Drawable cho track – ví dụ: @drawable/track_selector
+- app:msw_thumbDrawable             | Drawable cho thumb – ví dụ: @drawable/thumb_selector làm theo thumb_selector.xml
+- app:msw_trackDrawable             | Drawable cho track – ví dụ: @drawable/track_selector làm theo track_selector.xml
 - app:msw_thumbSize                 | Kích thước vuông của thumb – ví dụ: 24dp
 - app:msw_thumbWidth                | Chiều rộng riêng của thumb – ví dụ: 28dp
 - app:msw_thumbHeight               | Chiều cao riêng của thumb – ví dụ: 20dp
