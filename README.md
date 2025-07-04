@@ -1,21 +1,29 @@
 # 🔘 ButtonSwitch
-ButtonSwitch là một custom Android view giúp tạo nút gạt (switch) với giao diện hoàn toàn tùy biến, hỗ trợ ảnh cho thumb/track, hiệu ứng kéo mượt mà và có thể điều chỉnh kích thước, margin, padding linh hoạt.
+
+ButtonSwitch là một custom Android view giúp tạo nút gạt (switch) với giao diện hoàn toàn tùy biến,
+hỗ trợ ảnh cho thumb/track, hiệu ứng kéo mượt mà và có thể điều chỉnh kích thước, margin, padding
+linh hoạt.
 
 ## 📦 Cài đặt (qua JitPack)
 
 Thêm vào build.gradle (project):
+
 ```
-allprojects {
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        maven { url 'https://jitpack.io' }
-    }
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+	}
 }
 ```
 
 Thêm dependency vào build.gradle (module):
 
 ```
-implementation 'com.github.minh-nguyen-2003:button_switch:1.0.0'
+dependencies {
+    implementation("com.github.minh-nguyen-2003:button_switch:1.0.0")
+}
 ```
 
 ## ⚠️ Nhớ thay 1.0.0 bằng tag release phù hợp.
@@ -23,20 +31,17 @@ implementation 'com.github.minh-nguyen-2003:button_switch:1.0.0'
 ## 💡 Cách sử dụng cơ bản
 
 ```xml
-<vn.com.minh_nguyen.vkey.switchcustom.switch_button.ButtonSwitch
-    android:id="@+id/btnSwitch"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="30dp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
+
+<vn.minh_nguyen.vkey.switchcustom.ButtonSwitch android:id="@+id/btnSwitch"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:layout_marginTop="30dp" app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
     app:msw_thumbDrawable="@drawable/thumb_selector"
-    app:msw_trackDrawable="@drawable/track_selector"
-    app:msw_trackMarginHorizontal="10dp" />
+    app:msw_trackDrawable="@drawable/track_selector" app:msw_trackMarginHorizontal="10dp" />
 ```
 
 ## 🥉 Custom Attributes
+
 ```
 - app:msw_checked                   | true nếu bạn muốn công tắc bật mặc định, false nếu không (mặc định là false)
 - app:msw_thumbDrawable             | Drawable cho thumb – ví dụ: @drawable/thumb_selector
@@ -49,25 +54,31 @@ implementation 'com.github.minh-nguyen-2003:button_switch:1.0.0'
 - app:msw_trackMarginHorizontal     | Lề trái/phải track – ví dụ: 4dp
 - app:msw_thumbPadding              | khoảng cách tùy chỉnh từ thumb tới track – ví dụ: 2dp
 ```
+
 ## 🖼️ Tùy biến drawable theo trạng thái
 
 * Ví dụ: thumb_selector.xml
+
 ```
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@drawable/icon_thumb_selected" android:state_selected="true" />
     <item android:drawable="@drawable/icon_thumb_default" />
 </selector>
 ```
+
 * Ví dụ: track_selector.xml
+
 ```
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@drawable/track_on" android:state_selected="true" />
     <item android:drawable="@drawable/track_off" />
 </selector>
 ```
+
 ## ✅ ButtonSwitch sẽ cập nhật isSelected cho cả thumb và track khi bật/tắt để selector hoạt động chính xác.
 
 ## 🔁 Lắng nghe trạng thái bật/tắt
+
 ```kotlin
 binding.btnSwitch.setOnCheckedChangeListener { isChecked ->
     Log.d("Switch", "Trạng thái: $isChecked")
@@ -75,12 +86,15 @@ binding.btnSwitch.setOnCheckedChangeListener { isChecked ->
 ```
 
 ## 🛠️ Tuì chỉnh động trong code
+
 ```
 btnSwitch.setThumbDrawable(R.drawable.custom_thumb)
 btnSwitch.setTrackDrawable(R.drawable.custom_track)
 btnSwitch.setChecked(true)
 ```
+
 ## 📝 License
+
 ```
 MIT License
 
