@@ -65,6 +65,9 @@ class ButtonSwitch @JvmOverloads constructor(
                 if (paddingThumb > 0) thumbPadding(paddingThumb)
 
                 duration = getInt(R.styleable.SwitchCustom_msw_duration_thumb, 200).toLong()
+                if (duration < 0){
+                    duration = 0
+                }
             } finally {
                 recycle()
             }

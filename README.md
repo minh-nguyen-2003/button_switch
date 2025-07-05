@@ -4,6 +4,10 @@ ButtonSwitch là một custom Android view giúp tạo nút gạt (switch) với
 hỗ trợ ảnh cho thumb/track, hiệu ứng kéo mượt mà và có thể điều chỉnh kích thước, margin, padding
 linh hoạt.
 
+## ▶️ Demo
+
+![Button Switch Demo](demo.gif)
+
 ## 📦 Cài đặt (qua JitPack)
 
 Thêm vào build.gradle (project):
@@ -22,11 +26,11 @@ Thêm dependency vào build.gradle (module):
 
 ```
 dependencies {
-    implementation("com.github.minh-nguyen-2003:button_switch:1.0.0")
+    implementation("com.github.minh-nguyen-2003:button_switch:1.0.1")
 }
 ```
 
-## ⚠️ Nhớ thay 1.0.0 bằng tag release phù hợp.
+## ⚠️ Nhớ thay 1.0.1 bằng tag release phù hợp.
 
 ## 💡 Cách sử dụng cơ bản
 
@@ -43,12 +47,31 @@ dependencies {
     app:msw_thumbDrawable="@drawable/thumb_selector"
     app:msw_trackDrawable="@drawable/track_selector" 
     app:msw_trackMarginHorizontal="10dp" />
+
+<vn.minh_nguyen.vkey.switchcustom.ButtonSwitch
+    android:id="@+id/btnSwitch"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/buttonSwitch"
+    app:msw_thumbDrawable="@drawable/custom_thumb_2"
+    app:msw_thumbPadding="4dp"
+    app:msw_thumbSize="24dp"
+    app:msw_checked="true"
+    app:msw_duration_thumb="1000"
+    app:msw_trackDrawable="@drawable/custom_track_4"
+    app:msw_trackHeight="30dp"
+    app:msw_trackMarginHorizontal="0dp"
+    app:msw_trackWidth="60dp" />
+
 ```
 
 ## 🥉 Custom Attributes
 
 ```
-- app:msw_checked                   | true nếu bạn muốn công tắc bật mặc định, false nếu không (mặc định là false)
+- app:msw_checked                   | true nếu bạn muốn công tắc bật mặc định, false nếu không (mặc định là false) (Note: Chỉ cập nhập khi chạy không cập nhập trực tiếp trên xml)
 - app:msw_thumbDrawable             | Drawable cho thumb – ví dụ: @drawable/thumb_selector làm theo thumb_selector.xml
 - app:msw_trackDrawable             | Drawable cho track – ví dụ: @drawable/track_selector làm theo track_selector.xml
 - app:msw_thumbSize                 | Kích thước vuông của thumb – ví dụ: 24dp
@@ -58,6 +81,7 @@ dependencies {
 - app:msw_trackHeight               | Chiều cao track – ví dụ: 24dp
 - app:msw_trackMarginHorizontal     | Lề trái/phải track – ví dụ: 4dp
 - app:msw_thumbPadding              | khoảng cách tùy chỉnh từ thumb tới track – ví dụ: 2dp
+- msw_duration_thumb                | thời gian di chuyển thumb tính bằng đơn vị ms ví dụ 1000ms = 1s. Nên đặt giá trị từ không đến 1000, mọi giá trị nhỏ hơn 0 đều bằng 0, giá trị quá lớn sẽ đợi rất lâu như thể không sảy ra điều gì, giá trị = 0 tức không có animation
 ```
 
 ## 🖼️ Tùy biến drawable theo trạng thái
