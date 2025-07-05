@@ -8,7 +8,7 @@ linh hoạt.
 
 ![Button Switch Demo](demo.gif)
 
-## 📦 Cài đặt (qua JitPack)
+## ⚙️ Cài đặt (qua JitPack)
 
 Thêm vào build.gradle (project):
 
@@ -68,7 +68,7 @@ dependencies {
 
 ```
 
-## 🥉 Custom Attributes
+## 💡Custom Attributes
 
 | Thuộc tính                 | Mô tả                                                                                                                                                          |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -85,7 +85,7 @@ dependencies {
 | app:msw_duration_thumb     | Thời gian di chuyển thumb tính bằng đơn vị ms, ví dụ `1000ms = 1s`. Nên đặt từ 0–1000. Giá trị <0 thành 0. Giá trị quá lớn sẽ chờ lâu. 0 = không có animation. |
 
 
-## 🖼️ Tùy biến drawable theo trạng thái
+## 💡 Tùy biến drawable theo trạng thái
 
 * Ví dụ: thumb_selector.xml
 
