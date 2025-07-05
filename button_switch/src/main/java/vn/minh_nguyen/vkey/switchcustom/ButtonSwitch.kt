@@ -7,11 +7,14 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.widget.FrameLayout
 import vn.minh_nguyen.vkey.switchcustom.databinding.CustomSwitchLayoutBinding
+import kotlin.time.Duration
 
 @SuppressLint("ClickableViewAccessibility")
 class ButtonSwitch @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null
 ) : FrameLayout(context, attrs) {
+    private var duration: Long = 0
+    private var oldChecked = false
 
     private var onCheckedChangeListener: OnCheckedChangeListener? = null
     private val binding: CustomSwitchLayoutBinding =
@@ -61,6 +64,7 @@ class ButtonSwitch @JvmOverloads constructor(
                     getDimensionPixelSize(R.styleable.SwitchCustom_msw_thumbPadding, 0)
                 if (paddingThumb > 0) thumbPadding(paddingThumb)
 
+                duration = getInt(R.styleable.SwitchCustom_msw_duration_thumb, 200).toLong()
             } finally {
                 recycle()
             }
@@ -78,6 +82,7 @@ class ButtonSwitch @JvmOverloads constructor(
                 MotionEvent.ACTION_DOWN -> {
                     downX = event.rawX
                     thumbStartTranslationX = binding.thumbWrapper.translationX
+                    oldChecked = isChecked
                     true
                 }
 
@@ -93,22 +98,32 @@ class ButtonSwitch @JvmOverloads constructor(
 
                 MotionEvent.ACTION_UP -> {
                     val dx = event.rawX - downX
-                    if (kotlin.math.abs(dx) < 10) {
-                        isChecked = !isChecked
+
+                    val newState = if (kotlin.math.abs(dx) < 10) {
+                        !oldChecked
                     } else {
                         val middle = (width - binding.thumbWrapper.width) / 2
-                        isChecked = binding.thumbWrapper.translationX >= middle
+                        binding.thumbWrapper.translationX >= middle
                     }
-                    updateUI(withAnimation = true)
+
+                    if (newState != oldChecked) {
+                        isChecked = newState
+                        updateUI(withAnimation = true, shouldNotify = true)
+                    } else {
+                        isChecked = oldChecked
+                        updateUI(withAnimation = true, shouldNotify = false)
+                    }
+
                     true
                 }
 
                 else -> false
             }
         }
+
     }
 
-    private fun updateUI(shouldNotify: Boolean = true, withAnimation: Boolean = false) {
+    private fun updateUI(shouldNotify: Boolean = true, withAnimation: Boolean = false, duration: Long = this.duration) {
         binding.iconTrack.isSelected = isChecked
         binding.iconThumb.isSelected = isChecked
 
@@ -117,7 +132,7 @@ class ButtonSwitch @JvmOverloads constructor(
         if (withAnimation) {
             binding.thumbWrapper.animate()
                 .translationX(targetX)
-                .setDuration(200)
+                .setDuration(duration)
                 .setInterpolator(android.view.animation.AccelerateDecelerateInterpolator())
                 .start()
         } else {

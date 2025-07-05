@@ -11,5 +11,6 @@
         <attr name="msw_trackHeight" format="dimension" />
         <attr name="msw_trackMarginHorizontal" format="dimension" />
         <attr name="msw_thumbPadding" format="dimension" />
+        <attr name="msw_duration_thumb" format="integer" />
     </declare-styleable>
 </resources>

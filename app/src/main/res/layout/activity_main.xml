@@ -16,7 +16,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:msw_thumbDrawable="@drawable/custom_thumb"
         app:msw_trackDrawable="@drawable/custom_track"
-        app:msw_trackMarginHorizontal="10dp" />
+        app:msw_trackMarginHorizontal="10dp"
+        app:msw_duration_thumb="1000"/>
 
     <vn.minh_nguyen.vkey.switchcustom.ButtonSwitch
         android:id="@+id/btnSwitch2"
@@ -48,7 +49,8 @@
         app:msw_trackDrawable="@drawable/custom_track_3"
         app:msw_trackHeight="30dp"
         app:msw_trackMarginHorizontal="0dp"
-        app:msw_trackWidth="60dp" />
+        app:msw_trackWidth="60dp"
+        app:msw_duration_thumb="3000"/>
 
     <vn.minh_nguyen.vkey.switchcustom.ButtonSwitch
         android:id="@+id/btnSwitch4"
@@ -60,6 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnSwitch3"
         app:msw_thumbDrawable="@drawable/custom_thumb_3"
         app:msw_thumbPadding="3dp"
+        app:msw_duration_thumb="10000"
         app:msw_trackDrawable="@drawable/custom_track_3"
         app:msw_trackMarginHorizontal="0dp" />
 
@@ -70,6 +73,7 @@
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:msw_duration_thumb="500"
         app:layout_constraintTop_toBottomOf="@+id/btnSwitch4" />
 
     <vn.minh_nguyen.vkey.switchcustom.ButtonSwitch
@@ -81,8 +85,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonSwitch"
         app:msw_thumbDrawable="@drawable/custom_thumb_2"
-        app:msw_thumbPadding="3dp"
+        app:msw_thumbPadding="4dp"
         app:msw_thumbSize="24dp"
+        app:msw_checked="true"
+        app:msw_duration_thumb="1000"
         app:msw_trackDrawable="@drawable/custom_track_4"
         app:msw_trackHeight="30dp"
         app:msw_trackMarginHorizontal="0dp"
