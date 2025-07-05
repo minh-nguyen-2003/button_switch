@@ -13,21 +13,21 @@ linh hoạt.
 Thêm vào build.gradle (project):
 
 ```
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        mavenCentral()
-        maven { url = uri("https://jitpack.io") }
+	dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			mavenCentral()
+			maven { url = uri("https://jitpack.io") }
+		}
 	}
-}
 ```
 
 Thêm dependency vào build.gradle (module):
 
 ```
-dependencies {
-    implementation("com.github.minh-nguyen-2003:button_switch:1.0.1")
-}
+	dependencies {
+	        implementation("com.github.minh-nguyen-2003:button_switch:1.0.1")
+	}
 ```
 
 ## ⚠️ Nhớ thay 1.0.1 bằng tag release phù hợp.
