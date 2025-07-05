@@ -70,19 +70,20 @@ dependencies {
 
 ## 🥉 Custom Attributes
 
-```
-- app:msw_checked                   | true nếu bạn muốn công tắc bật mặc định, false nếu không (mặc định là false) (Note: Chỉ cập nhập khi chạy không cập nhập trực tiếp trên xml)
-- app:msw_thumbDrawable             | Drawable cho thumb – ví dụ: @drawable/thumb_selector làm theo thumb_selector.xml
-- app:msw_trackDrawable             | Drawable cho track – ví dụ: @drawable/track_selector làm theo track_selector.xml
-- app:msw_thumbSize                 | Kích thước vuông của thumb – ví dụ: 24dp
-- app:msw_thumbWidth                | Chiều rộng riêng của thumb – ví dụ: 28dp
-- app:msw_thumbHeight               | Chiều cao riêng của thumb – ví dụ: 20dp
-- app:msw_trackWidth                | Chiều rộng track – ví dụ: 60dp
-- app:msw_trackHeight               | Chiều cao track – ví dụ: 24dp
-- app:msw_trackMarginHorizontal     | Lề trái/phải track – ví dụ: 4dp
-- app:msw_thumbPadding              | khoảng cách tùy chỉnh từ thumb tới track – ví dụ: 2dp
-- msw_duration_thumb                | thời gian di chuyển thumb tính bằng đơn vị ms ví dụ 1000ms = 1s. Nên đặt giá trị từ không đến 1000, mọi giá trị nhỏ hơn 0 đều bằng 0, giá trị quá lớn sẽ đợi rất lâu như thể không sảy ra điều gì, giá trị = 0 tức không có animation
-```
+| Thuộc tính                 | Mô tả                                                                                                                                                          |
+|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| app:msw_checked            | true nếu bạn muốn công tắc bật mặc định, false nếu không (mặc định là false). **Note**: Chỉ cập nhật khi chạy, không cập nhật trực tiếp trên XML.                |
+| app:msw_thumbDrawable      | Drawable cho thumb – ví dụ: `@drawable/thumb_selector` làm theo thumb_selector.xml                                                                             |
+| app:msw_trackDrawable      | Drawable cho track – ví dụ: `@drawable/track_selector` làm theo track_selector.xml                                                                             |
+| app:msw_thumbSize          | Kích thước vuông của thumb – ví dụ: `24dp`                                                                                                                     |
+| app:msw_thumbWidth         | Chiều rộng riêng của thumb – ví dụ: `28dp`                                                                                                                     |
+| app:msw_thumbHeight        | Chiều cao riêng của thumb – ví dụ: `20dp`                                                                                                                      |
+| app:msw_trackWidth         | Chiều rộng track – ví dụ: `60dp`                                                                                                                               |
+| app:msw_trackHeight        | Chiều cao track – ví dụ: `24dp`                                                                                                                                |
+| app:msw_trackMarginHorizontal | Lề trái/phải track – ví dụ: `4dp`                                                                                                                            |
+| app:msw_thumbPadding       | Khoảng cách tùy chỉnh từ thumb tới track – ví dụ: `2dp`                                                                                                        |
+| app:msw_duration_thumb     | Thời gian di chuyển thumb tính bằng đơn vị ms, ví dụ `1000ms = 1s`. Nên đặt từ 0–1000. Giá trị <0 thành 0. Giá trị quá lớn sẽ chờ lâu. 0 = không có animation. |
+
 
 ## 🖼️ Tùy biến drawable theo trạng thái
 
