@@ -115,7 +115,7 @@ binding.btnSwitch.setOnCheckedChangeListener { isChecked ->
 }
 ```
 
-## Tuì chỉnh động trong code
+## Tùy chỉnh động trong code
 
 ```
 btnSwitch.setThumbDrawable(R.drawable.custom_thumb)
